@@ -1,0 +1,90 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark light;
+  color: var(--color-main);
+  background-color: var(--bg-main);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --bg-main: #000000;
+  --bg-disabled: #202020;
+  --bg-active: #2d2d2d;
+  --color-third: #9e9e9e;
+  --color-second: #a7a7a7;
+  --color-main: #ffffff;
+  --color-error: #b76969;
+  --color-select-seat: blue;
+}
+
+a {
+  font-weight: 500;
+  color: var(--color-second);
+  cursor: pointer;
+  text-decoration: underline;
+
+  &:hover {
+    color: var(--color-third);
+  }
+}
+
+body {
+  margin: 0;
+  place-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid var(--color-second);
+  color: var(--color-main);
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  background-color: var(--bg-main);
+
+  &:hover {
+    background-color: var(--bg-active);
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 1px auto -webkit-focus-ring-color;
+  }
+}
+
+#app {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: var(--color-main);
+    background-color: var(--bg-main);
+  }
+  a:hover {
+    color: var(--bg-active);
+  }
+  button {
+    background-color: var(--bg-main);
+  }
+}
