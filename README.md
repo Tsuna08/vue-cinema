@@ -2,6 +2,11 @@
 
 An online ticket booking system for cinemas built with Vue 3 and TypeScript.
 
+## Preview
+
+![Cinema Preview](public/cinema.png)
+
+
 ## Technologies
 
 - **Vue 3**
