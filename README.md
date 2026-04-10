@@ -1,8 +1,8 @@
 # Cinema Booking System
 
-Система онлайн-бронирования билетов в кинотеатр на Vue 3 с TypeScript.
+An online ticket booking system for cinemas built with Vue 3 and TypeScript.
 
-## Технологии
+## Technologies
 
 - **Vue 3**
 - **TypeScript**
@@ -11,45 +11,46 @@
 - **Vite**
 - **Axios**
 
-## Архитектура (Feature-Sliced Design)
+## Architecture (Feature-Sliced Design)
 
 ```
 src/
-├── app/                    # Глобальные настройки приложения
-├── pages/                  # Страницы приложения
-├── features/               # Бизнес-фичи
-│   ├── Ticket/             # Бронирование билетов
-│   └── Schedule/           # Расписание сеансов
+├── app/                    # Global application settings
+├── pages/                  # Application pages
+├── features/               # Business features
+│   ├── Ticket/             # Ticket booking
+│   └── Schedule/           # Session schedule
 │
-├── entities/               # Бизнес-сущности
-│   ├── Booking/            # Бронирования
-│   ├── Cinema/             # Кинотеатры
-│   ├── Movie/              # Фильмы
-│   └── MovieSession        # Киносеансы
+├── entities/               # Business entities
+│   ├── Booking/            # Bookings
+│   ├── Cinema/             # Cinemas
+│   ├── Movie/              # Movies
+│   └── MovieSession        # Movie sessions
 │
-├── shared/                 # Переиспользуемый код
-│   ├── types/              # Типы
-│   ├── ui/                 # UI-компоненты
-│   └── utils/              # Утилиты
+├── shared/                 # Reusable code
+│   ├── types/              # Types
+│   ├── ui/                 # UI components
+│   └── utils/              # Utilities
 │
-└── widgets/                # Самостоятельные виджеты
+└── widgets/                # Independent widgets
+    ├── Table/              # Tables
 ```
 
-## Разработка
+## Development
 
 ```bash
-# Установка зависимостей
+# Install dependencies
 yarn install
 
-# Запуск разработки
+# Start development server
 yarn dev
 
-# Сборка проекта
+# Build the project
 yarn build
 
-# Линтинг
+# Run linter
 yarn lint
 
-# Запуск prettier
-yarn lint
+# Run prettier
+yarn format
 ```
