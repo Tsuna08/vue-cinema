@@ -1,4 +1,4 @@
-# Cinema Booking System
+# PRISM Cinema
 
 An online ticket booking system for cinemas built with Vue 3 and TypeScript.
 
