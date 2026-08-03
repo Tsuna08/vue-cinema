@@ -1,6 +1,6 @@
-import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import { fileURLToPath, URL } from "node:url";
+import { defineConfig } from "vite";
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -15,7 +15,6 @@ export default defineConfig({
       "/api": {
         target: "http://localhost:3022",
         changeOrigin: true,
-        rewrite: p => p.replace(/^\/api/, ""),
       },
       "/static/": {
         target: "http://localhost:3022",

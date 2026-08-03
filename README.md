@@ -6,7 +6,6 @@ An online ticket booking system for cinemas built with Vue 3 and TypeScript.
 
 ![Cinema Preview](public/cinema.png)
 
-
 ## Technologies
 
 - **Vue 3**
@@ -59,3 +58,18 @@ yarn lint
 # Run prettier
 yarn format
 ```
+
+## Deploy to Vercel
+
+1. Create a Vercel project from this repository.
+2. Set the build command to `yarn build`.
+3. Set the output directory to `dist`.
+4. Add the following environment variables:
+
+```env
+VITE_API_BASE_URL=/api/
+JWT_SECRET=your_jwt_secret
+PORT=3022
+```
+
+> Note: this project uses an Express API bundled as a Vercel serverless entrypoint. The backend stores data in memory, so data is reset on cold starts.

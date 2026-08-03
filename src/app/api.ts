@@ -26,7 +26,7 @@ export const API_ROUTES = {
 
 export function createBaseClient(): AxiosInstance {
   return axios.create({
-    baseURL: "/api/",
+    baseURL: import.meta.env.VITE_API_BASE_URL || "/api/",
     timeout: 10000,
     headers: {
       "Content-Type": "application/json",
@@ -38,7 +38,7 @@ export const client = (): AxiosInstance => {
   const authStore = useAuthStore();
   const client = createBaseClient();
 
-  client.interceptors.request.use(config => {
+  client.interceptors.request.use((config) => {
     const token = authStore.getToken;
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
@@ -48,7 +48,7 @@ export const client = (): AxiosInstance => {
 
   client.interceptors.response.use(
     (response: AxiosResponse) => response,
-    error => {
+    (error) => {
       const { status } = error.response || {};
 
       if (status === 401) {
