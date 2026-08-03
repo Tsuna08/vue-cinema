@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently -k -n frontend,backend -c cyan,magenta \"npm --prefix server run dev\" \"vite\"",
     "build": "vue-tsc -b && vite build",
     "lint": "eslint . --fix",
     "format": "prettier --write src/"
@@ -19,6 +19,7 @@
     "@vitejs/plugin-vue": "^6.0.1",
     "@vue/eslint-config-typescript": "^14.6.0",
     "@vue/tsconfig": "^0.8.1",
+    "concurrently": "^9.2.3",
     "eslint": "^9.38.0",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-vue": "^10.5.1",
